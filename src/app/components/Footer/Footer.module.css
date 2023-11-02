@@ -1,15 +1,14 @@
-/* Header container */
-.header {
+/* footer container */
+.footer {
   position: relative;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  height: 30px;
+  height: 100px;
   background: linear-gradient(to right, #a446a4, #83a5be);
   z-index: 1;
 }
 
-.header::before {
+.footer::before {
   content: "";
   position: absolute;
   top: 0;
@@ -34,17 +33,6 @@
   }
 }
 
-.header::before {
+.footer::before {
   animation: gradient 10s infinite;
-}
-
-/* Icon */
-.icon {
-  height: 30px;
-  width: 30px;
-}
-
-/* Links */
-.links {
-  padding: 0 10px;
 }

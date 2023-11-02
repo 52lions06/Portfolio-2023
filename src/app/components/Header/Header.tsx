@@ -8,7 +8,9 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div>
-        <img src="icon.png" alt="Icon" className={styles.icon} />
+        <Link href={"/"}>
+          <img src="icon.png" alt="Icon" className={styles.icon} />
+        </Link>
       </div>
       <nav>
         <Link href="/what-i-do" className={styles.links}>
