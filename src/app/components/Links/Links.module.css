@@ -1,0 +1,11 @@
+.links {
+  display: inline-block;
+  padding: 0 10px;
+  color: #fff; /* Example text color */
+  font-weight: bold;
+  text-shadow: 0 0 2px #000, 0 0 3px #000, 0 0 4px #000, 0 0 5px #000;
+  transition: transform 0.3s ease-in-out;
+}
+.links:hover {
+  transform: scale(1.2);
+}
