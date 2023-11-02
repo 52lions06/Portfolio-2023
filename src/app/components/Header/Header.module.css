@@ -1,0 +1,74 @@
+/* components/Header/Header.module.css */
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  background: linear-gradient(to right, #a446a4, #83a5be);
+  z-index: 1;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to right, #e54d24, #e54d24);
+  z-index: -1;
+  transition: opacity 5s ease-in-out;
+  opacity: 0;
+}
+
+@keyframes gradient {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.header::before {
+  animation: gradient 10s infinite;
+}
+
+/* .header {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  background: linear-gradient(to right, #a446a4, #83a5be);
+  animation: gradient 20s ease-in-out infinite alternate;
+}
+
+.icon {
+  height: 30px;
+  width: 30px;
+}
+
+.links {
+  padding: 0 10px;
+}
+
+@keyframes gradient {
+  0% {
+    background: linear-gradient(to right, #a446a4, #83a5be);
+  }
+  25% {
+    background: linear-gradient(to right, #83a5be, #a446a4);
+  }
+  50% {
+    background: linear-gradient(to right, #83a5be, #e54d24);
+  }
+  75% {
+    background: linear-gradient(to right, #e54d24, #83a5be);
+  }
+  100% {
+    background: linear-gradient(to right, #e54d24, #a446a4);
+  }
+} */
