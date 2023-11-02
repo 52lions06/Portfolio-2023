@@ -4,12 +4,10 @@ import ResumeBtn from "../ResumeBtn/ResumeBtn";
 import styles from "./Footer.module.css";
 
 const Footer = () => {
-  // Function to download the software engineer resume
   const downloadSoftwareResume = () => {
     window.location.href = "/WilliamMcKelvey_SoftwareEngineerLeader.pdf";
   };
 
-  // Function to download the project manager resume
   const downloadProjectManagerResume = () => {
     window.location.href = "/WilliamMcKelvey_Project_Manager.pdf";
   };

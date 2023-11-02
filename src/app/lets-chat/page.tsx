@@ -1,7 +1,11 @@
 import React from "react";
 
 const LetsChat = () => {
-  return <h1>Lets Chat</h1>;
+  return (
+    <main>
+      <h1>Lets chat</h1>
+    </main>
+  );
 };
 
 export default LetsChat;

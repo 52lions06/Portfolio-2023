@@ -3,7 +3,7 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  height: 80px;
+  height: 57px;
   background: linear-gradient(to right, #a446a4, #83a5be);
   z-index: 1;
 }
@@ -37,9 +37,16 @@
   animation: gradient 10s infinite;
 }
 
+.footer p {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  text-shadow: 0 0 2px #000, 0 0 3px #000, 0 0 4px #000, 0 0 5px #000;
+}
+
 .downloadResume {
   align-items: center;
-  background-color: #fee6e3;
+  background-color: #ffffff;
   border: 2px solid #111;
   border-radius: 8px;
   box-sizing: border-box;

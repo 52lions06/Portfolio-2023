@@ -1,7 +1,12 @@
 import React from "react";
+import styles from "./whatIDo.module.css";
 
 const WhatIDo = () => {
-  return <h1>What I Do</h1>;
+  return (
+    <main>
+      <h1>What I Do</h1>
+    </main>
+  );
 };
 
 export default WhatIDo;
