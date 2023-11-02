@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import ResumeBtn from "../ResumeBtn/ResumeBtn";
 import styles from "./Footer.module.css";
 
@@ -20,7 +21,15 @@ const Footer = () => {
         text={"Software Engineer Resume"}
       />
 
-      <p>© 2023 Another One....DJ Khaled voice anyone???</p>
+      <p>
+        <a
+          href="https://github.com/52lions06"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          © 2023 Another One....DJ Khaled voice anyone???
+        </a>
+      </p>
 
       <ResumeBtn
         onClick={downloadProjectManagerResume}
