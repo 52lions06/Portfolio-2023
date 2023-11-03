@@ -1,15 +1,159 @@
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
-  min-height: 90vh;
+.block {
+  position: relative;
+  margin: 0;
+  width: 500px;
+  height: 250px;
+  background: linear-gradient(0deg, #000, #272727);
 }
 
-/* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-  .grid {
-    grid-template-columns: repeat(2, 50%);
+.block:before,
+.block:after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(
+    45deg,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000
+  );
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.block:after {
+  filter: blur(50px);
+}
+
+Resources .titleContainer {
+  position: relative;
+  display: inline-block;
+  margin: 100px;
+  padding: 20px;
+}
+
+.title {
+  color: #000000;
+  padding: 0px;
+  white-space: nowrap; /* Ensures the text stays on one line */
+  text-shadow: 0 0 10px #fff, /* White glow */ 0 0 20px #fff,
+    /* White glow */ 0 0 30px #ff3, /* Color glow */ 0 0 40px #f0f,
+    /* Color glow */ 0 0 70px #0ff; /* Color glow */
+}
+
+.titleContainer::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  z-index: -1;
+  background: linear-gradient(
+    45deg,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000
+  );
+  background-size: 2%;
+  animation: rotate 20s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
+}
+
+@keyframes rotate {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.mainContent {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.flyingImage {
+  animation: flyInAndGrow 10s ease forwards, spin 10s ease-in-out forwards;
+  animation-delay: 1s; /* Delay to start after fly-in animation */
+}
+
+.flyingImage:hover {
+  /* Define your hover transformation, e.g., a slight move */
+  transform: translate(10px, 10px);
+  transition: transform 0.5s;
+}
+
+@keyframes flyInAndGrow {
+  0% {
+    opacity: 0;
+    visibility: hidden; /* Initially the image is not visible */
+    transform: translateY(-100vh) scale(0);
+  }
+  1% {
+    visibility: visible; /* As soon as the animation starts, we make it visible */
+  }
+  30% {
+    transform: scale(1.2); /* Grow larger than the screen */
+    opacity: 1;
+  }
+  60% {
+    transform: scale(0.8); /* Shrink back a little */
+  }
+  100% {
+    transform: translateY(0) scale(1); /* Move to final position and scale to normal size */
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg); /* Rotate clockwise */
+  }
+  100% {
+    transform: rotate(-360deg); /* Then rotate counterclockwise */
   }
 }
