@@ -56,7 +56,6 @@ Resources .titleContainer {
 }
 
 .title {
-  color: #000000;
   padding: 0px;
   white-space: nowrap; /* Ensures the text stays on one line */
   text-shadow: 0 0 10px #fff, /* White glow */ 0 0 20px #fff,
@@ -109,6 +108,27 @@ Resources .titleContainer {
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
+  overflow-x: hidden;
+}
+
+.word {
+  display: inline-block; /* Needed for animation */
+  opacity: 0; /* Start fully transparent */
+  transform: translateX(100%); /* Start offscreen to the right */
+  animation: slideInFromRight 1s forwards; /* Animation name, duration, fill-mode */
+  white-space: nowrap; /* Ensure that words do not wrap */
+}
+
+/* Define the keyframes for the sliding animation */
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .container {

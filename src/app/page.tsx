@@ -63,6 +63,10 @@ export default function Home() {
     animateText();
   }, []);
 
+  const words =
+    "Just your normal cool dad who likes to hang with his kid, take care of the wife, play video games, read books, debate, drink beer and whiskey, and....stuff.. welcome 😎";
+  const wordArray = words.split(" ");
+
   return (
     <>
       <main>
@@ -76,8 +80,16 @@ export default function Home() {
         </section>
         <section className={styles.mainContent}>
           <h2>
-            Text that I will be adding about who I am, why I had to create a new
-            portfolio, and what I set out todo{" "}
+            {wordArray.map((word, index) => (
+              <span
+                key={index}
+                className={styles.word}
+                // You will want to slightly adjust the delay for spaces
+                style={{ animationDelay: `${0.1 * index}s` }}
+              >
+                {word}&nbsp;
+              </span>
+            ))}
           </h2>
         </section>
         <section></section>
