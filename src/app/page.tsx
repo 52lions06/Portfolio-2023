@@ -72,7 +72,6 @@ export default function Home() {
       <main>
         <section>
           <h1 className={styles.block} ref={blockRef}>
-            {" "}
             <span className={styles.title} ref={textRef}>
               Welcome to Will's World
             </span>
@@ -92,7 +91,6 @@ export default function Home() {
             ))}
           </h2>
         </section>
-        <section></section>
       </main>
     </>
   );

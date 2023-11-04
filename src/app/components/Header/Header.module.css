@@ -3,7 +3,7 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   height: 4%;
   background: linear-gradient(to right, #a446a4, #83a5be);
   z-index: 1;
