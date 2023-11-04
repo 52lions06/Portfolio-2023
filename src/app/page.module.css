@@ -62,6 +62,10 @@ Resources .titleContainer {
   text-shadow: 0 0 10px #fff, /* White glow */ 0 0 20px #fff,
     /* White glow */ 0 0 30px #ff3, /* Color glow */ 0 0 40px #f0f,
     /* Color glow */ 0 0 70px #0ff; /* Color glow */
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: center center;
 }
 
 .titleContainer::before {
