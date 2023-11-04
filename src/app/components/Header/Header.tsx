@@ -8,9 +8,7 @@ import Links from "../Links/Links";
 const Header = () => (
   <header className={styles.header}>
     <div>
-      <Link href={"/"}>
-        <img src="icon.png" alt="Icon" className={styles.icon} />
-      </Link>
+      <Link href={"/"} className={styles.icon} />
     </div>
     <nav>
       <Links />
