@@ -4,6 +4,12 @@
   color: hsl(230, 100%, 95%);
   animation: lights 5s 750ms linear infinite;
 }
+
+h2.title {
+  font: 150% / 1.5 Raleway, sans-serif;
+  margin: 0;
+}
+
 .flexContainer {
   display: flex;
   flex-direction: row;
@@ -22,6 +28,9 @@
   border: 3px solid yellowgreen;
   border-radius: 20px;
   transition: background-color 0.5s;
+  text-align: justify;
+  text-align-last: center;
+  padding: 10px;
 }
 
 .manage.box:hover {
