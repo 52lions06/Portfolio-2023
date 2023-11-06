@@ -112,6 +112,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 0;
 }
 
 .star {
@@ -145,6 +146,8 @@ main {
   align-items: center;
   padding: 8rem;
   min-height: 90vh;
+  z-index: 1;
+  position: relative;
 }
 
 @media (prefers-color-scheme: dark) {

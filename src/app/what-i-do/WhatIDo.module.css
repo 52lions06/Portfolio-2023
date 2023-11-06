@@ -1,0 +1,21 @@
+.flexContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 2em;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 320px;
+  height: 400px;
+  margin: 10px;
+  border: 10px solid yellowgreen;
+  border-radius: 20px;
+}
+
+.box:hover {
+  background-color: white;
+}
