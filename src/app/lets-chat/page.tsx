@@ -17,13 +17,14 @@ const LetsChat = () => {
         {!selectedOption && (
           <SelectOption setSelectedOption={setSelectedOption} />
         )}
-        {selectedOption === "Potential Job" && !selectedButton && (
+        {selectedOption === "Potential Job 💼" && !selectedButton && (
           <ContactForm setFormSubmitted={setFormSubmitted} />
         )}
-        {selectedOption === "Would you like my services" && !selectedButton && (
-          <ServiceButtons setSelectedButton={setSelectedButton} />
-        )}
-        {selectedOption === "Want to buy me a coffee" && !selectedButton && (
+        {selectedOption === "Would you like my services 💻" &&
+          !selectedButton && (
+            <ServiceButtons setSelectedButton={setSelectedButton} />
+          )}
+        {selectedOption === "Want to buy me a coffee 😎" && !selectedButton && (
           <h1>COFFEEEEEEEEEEEEE</h1>
         )}
         {selectedButton && !formSubmitted && (
