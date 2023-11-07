@@ -57,7 +57,6 @@ const ContactForm: React.FC<Props> = ({ setFormSubmitted }) => {
         value={formValues.phone}
         onChange={handleInputChange}
         placeholder="Phone Number"
-        required
       />
       <div>
         <label>

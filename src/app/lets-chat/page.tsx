@@ -13,7 +13,7 @@ const LetsChat = () => {
   return (
     <main>
       <h1 className={styles.title}>Lets chat</h1>
-      <section className={styles.contact}>
+      <section className={`${styles.selectbox} ${styles.contact}`}>
         {!selectedOption && (
           <SelectOption setSelectedOption={setSelectedOption} />
         )}

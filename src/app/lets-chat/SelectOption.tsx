@@ -14,9 +14,9 @@ const SelectOption: React.FC<Props> = ({ setSelectedOption }) => {
       <option disabled selected>
         Select an option
       </option>
-      <option>Potential Job</option>
-      <option>Would you like my services</option>
-      <option>Want to buy me a coffee</option>
+      <option>Potential Job 💼</option>
+      <option>Would you like my services 💻</option>
+      <option>Want to buy me a coffee 😎</option>
     </select>
   );
 };
