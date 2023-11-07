@@ -29,7 +29,7 @@ const WhatIDo = () => {
             Tech Maestro: Coding Expertise and Integration Wizardry for
             Next-Level Solutions
           </b>
-          <p>
+          <p style={{ textAlign: "center" }}>
             As a tech specialist who is commited to innovation, I excel in
             problem-solving and programming across languages like JavaScript,
             JAVA, and C++, using frameworks such as React, JQuery, and Kotlin. I
@@ -43,7 +43,7 @@ const WhatIDo = () => {
             Documentation Dynamo: Mastering Clarity and Continuity in Workflow
             Design
           </b>
-          <p>
+          <p style={{ textAlign: "center" }}>
             I specialize in creating comprehensive, user-friendly documentation
             and workflows. My proficiency with tools like Atlassian's
             Confluence, Microsoft Office suite, GitHub, and more, allows me to
