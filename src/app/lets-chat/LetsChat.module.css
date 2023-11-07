@@ -1,0 +1,71 @@
+.title {
+  --s: 0.1em; /* the thickness of the line */
+  --c: #ffffff; /* the color */
+
+  color: #ffffffb2;
+  padding-bottom: var(--s);
+  background: linear-gradient(90deg, var(--c) 50%, #ffffff 0)
+      calc(100% - var(--_p, 0%)) / 200% 100%,
+    linear-gradient(var(--c) 0 0) 0% 100% / var(--_p, 0%) var(--s) no-repeat;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  transition: 0.5s;
+}
+
+.title:hover {
+  --_p: 100%;
+}
+
+/* body {
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  place-content: center;
+} */
+
+.title {
+  font-family: system-ui, sans-serif;
+  font-size: 4rem;
+  cursor: pointer;
+  margin: 2vh;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 1px solid yellowgreen;
+  border-radius: 20px;
+  padding: 50px;
+  width: 50vw;
+  height: 50vh;
+
+  border: 8px solid;
+  border-image: repeating-linear-gradient(
+      135deg,
+      #f8ca00 0 10px,
+      #e97f02 0 20px,
+      #bd1550 0 30px
+    )
+    8;
+  -webkit-mask: conic-gradient(
+        from 180deg at top 8px right 8px,
+        #0000 90deg,
+        #000 0
+      )
+      var(--_i, 200%) 0 /200% var(--_i, 8px) border-box no-repeat,
+    conic-gradient(at bottom 8px left 8px, #0000 90deg, #000 0) 0
+      var(--_i, 200%) / var(--_i, 8px) 200% border-box no-repeat,
+    linear-gradient(#000 0 0) padding-box no-repeat;
+  transition: 0.3s, -webkit-mask-position 0.3s 0.3s;
+}
+
+.contact:hover {
+  --_i: 100%;
+  color: #cc333f;
+  transition: 0.3s, -webkit-mask-size 0.3s 0.3s;
+}
+
+.services {
+  text-align: center;
+}
