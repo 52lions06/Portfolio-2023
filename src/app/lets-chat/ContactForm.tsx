@@ -1,5 +1,6 @@
 import React, { useState, ChangeEvent } from "react";
 // import emailjs from "emailjs-com";
+import styles from "./ContactForm.module.css";
 
 interface Props {
   setFormSubmitted: (submitted: boolean) => void;
@@ -46,6 +47,7 @@ const ContactForm: React.FC<Props> = ({ setFormSubmitted }) => {
       <input
         type="text"
         name="fullname"
+        className={`${styles.forminput} ${styles.inputheight}`}
         value={formValues.fullname}
         onChange={handleInputChange}
         placeholder="Full Name"
@@ -54,14 +56,15 @@ const ContactForm: React.FC<Props> = ({ setFormSubmitted }) => {
       <input
         type="tel"
         name="phone"
+        className={`${styles.forminput} ${styles.inputheight}`}
         value={formValues.phone}
         onChange={handleInputChange}
         placeholder="Phone Number"
       />
-      <div>
-        <label>
+      <div className={styles.radiosection}>
+        <label className={styles.checkbox}>
           <input
-            type="radio"
+            type="checkbox"
             name="contactPreference"
             value="text"
             checked={formValues.contactPreference === "text"}
@@ -69,9 +72,9 @@ const ContactForm: React.FC<Props> = ({ setFormSubmitted }) => {
           />
           Text
         </label>
-        <label>
+        <label className={styles.checkbox}>
           <input
-            type="radio"
+            type="checkbox"
             name="contactPreference"
             value="call"
             checked={formValues.contactPreference === "call"}
@@ -79,9 +82,9 @@ const ContactForm: React.FC<Props> = ({ setFormSubmitted }) => {
           />
           Call
         </label>
-        <label>
+        <label className={styles.checkbox}>
           <input
-            type="radio"
+            type="checkbox"
             name="contactPreference"
             value="email"
             checked={formValues.contactPreference === "email"}
@@ -93,6 +96,7 @@ const ContactForm: React.FC<Props> = ({ setFormSubmitted }) => {
       <input
         type="email"
         name="email"
+        className={`${styles.forminput} ${styles.inputheight}`}
         value={formValues.email}
         onChange={handleInputChange}
         placeholder="Email"
@@ -100,14 +104,29 @@ const ContactForm: React.FC<Props> = ({ setFormSubmitted }) => {
       />
       <textarea
         name="message"
+        className={`${styles.forminput} ${styles.messageheight}`}
         value={formValues.message}
         onChange={handleInputChange}
         placeholder="Message"
         required
       />
-      <button type="submit">Send</button>
+      <div className={styles.buttonsection}>
+        <button type="submit" className={styles.glowingBtn}>
+          <span className={styles.glowingTxt}>
+            S<span className={styles.faultyLetter}>E</span>ND
+          </span>
+        </button>
+      </div>
     </form>
   );
 };
 
 export default ContactForm;
+
+{
+  /* <button classname="glowing-btn">
+  <span class="glowing-txt">
+    C<span class="faulty-letter">L</span>ICK
+  </span>
+</button>; */
+}

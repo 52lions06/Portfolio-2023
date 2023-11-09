@@ -10,8 +10,8 @@ const SelectOption: React.FC<Props> = ({ setSelectedOption }) => {
   };
 
   return (
-    <select onChange={handleSelectChange}>
-      <option disabled selected>
+    <select defaultValue="" onChange={handleSelectChange}>
+      <option disabled value="">
         Select an option
       </option>
       <option>Potential Job 💼</option>
