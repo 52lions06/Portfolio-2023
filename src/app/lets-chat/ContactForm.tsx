@@ -1,12 +1,18 @@
 import React, { useState, ChangeEvent } from "react";
-// import emailjs from "emailjs-com";
+import { sendEmail } from "./sendEmail";
 import styles from "./ContactForm.module.css";
 
-interface Props {
+interface ContactFormProps {
   setFormSubmitted: (submitted: boolean) => void;
+  selectedOption: string;
+  selectedButton?: string;
 }
 
-const ContactForm: React.FC<Props> = ({ setFormSubmitted }) => {
+const ContactForm: React.FC<ContactFormProps> = ({
+  setFormSubmitted,
+  selectedOption,
+  selectedButton,
+}) => {
   const [formValues, setFormValues] = useState({
     fullname: "",
     phone: "",
@@ -26,19 +32,10 @@ const ContactForm: React.FC<Props> = ({ setFormSubmitted }) => {
     });
   };
 
-  const handleSubmit = (event: ChangeEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: ChangeEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // emailjs
-    //   .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", formValues, "YOUR_USER_ID")
-    //   .then(
-    //     (response) => {
-    //       console.log("SUCCESS!", response.status, response.text);
-    //       setFormSubmitted(true);
-    //     },
-    //     (err) => {
-    //       console.log("FAILED...", err);
-    //     }
-    //   );
+    await sendEmail({ ...formValues, selectedOption, selectedButton });
+    setFormSubmitted(true);
   };
 
   return (
@@ -122,11 +119,3 @@ const ContactForm: React.FC<Props> = ({ setFormSubmitted }) => {
 };
 
 export default ContactForm;
-
-{
-  /* <button classname="glowing-btn">
-  <span class="glowing-txt">
-    C<span class="faulty-letter">L</span>ICK
-  </span>
-</button>; */
-}

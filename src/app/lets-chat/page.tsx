@@ -18,7 +18,10 @@ const LetsChat = () => {
           <SelectOption setSelectedOption={setSelectedOption} />
         )}
         {selectedOption === "Potential Job 💼" && !selectedButton && (
-          <ContactForm setFormSubmitted={setFormSubmitted} />
+          <ContactForm
+            setFormSubmitted={setFormSubmitted}
+            selectedOption={selectedOption}
+          />
         )}
         {selectedOption === "Would you like my services 💻" &&
           !selectedButton && (
@@ -28,7 +31,11 @@ const LetsChat = () => {
           <h1>COFFEEEEEEEEEEEEE</h1>
         )}
         {selectedButton && !formSubmitted && (
-          <ContactForm setFormSubmitted={setFormSubmitted} />
+          <ContactForm
+            setFormSubmitted={setFormSubmitted}
+            selectedOption={selectedOption}
+            selectedButton={selectedButton}
+          />
         )}
         {formSubmitted && <p>Thank you for your message!</p>}
       </section>
