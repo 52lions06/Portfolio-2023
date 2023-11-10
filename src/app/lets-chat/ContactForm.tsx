@@ -1,5 +1,4 @@
 import React, { useState, ChangeEvent } from "react";
-import { sendEmail } from "./sendEmail";
 import styles from "./ContactForm.module.css";
 
 interface ContactFormProps {
@@ -34,8 +33,24 @@ const ContactForm: React.FC<ContactFormProps> = ({
 
   const handleSubmit = async (event: ChangeEvent<HTMLFormElement>) => {
     event.preventDefault();
-    await sendEmail({ ...formValues, selectedOption, selectedButton });
-    setFormSubmitted(true);
+    try {
+      const response = await fetch("/api/sendemail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ formValues, selectedOption, selectedButton }),
+      });
+
+      if (response.ok) {
+        console.log("Email sent");
+        setFormSubmitted(true);
+      } else {
+        console.error("Error sending email");
+      }
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (

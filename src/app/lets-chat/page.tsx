@@ -11,7 +11,7 @@ const LetsChat = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   return (
-    <main>
+    <main className={styles.letschat}>
       <h1 className={styles.title}>Lets chat</h1>
       <section className={`${styles.selectbox} ${styles.contact}`}>
         {!selectedOption && (

@@ -1,3 +1,7 @@
+.letschat {
+  padding: 5rem;
+}
+
 .title {
   --s: 0.1em; /* the thickness of the line */
   --c: #ffffff; /* the color */
