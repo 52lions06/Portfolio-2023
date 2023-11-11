@@ -1,0 +1,38 @@
+.scene {
+  position: relative;
+  width: 100%; /* Use the full width */
+  height: 480px; /* Set a fixed height */
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circleiframe {
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  transform-style: preserve-3d;
+  will-change: transform; /* Optimize for animations */
+}
+
+@keyframes comeAndGo {
+  0%,
+  100% {
+    transform: translateX(0) scale(1); /* Center, normal size */
+    opacity: 1;
+  }
+  25%,
+  75% {
+    transform: translateX(200%) scale(0.8); /* Move right further, slightly smaller */
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateX(-200%) scale(0.8); /* Move left further, same size as when it's on the right */
+    opacity: 0.8;
+  }
+}
+
+.animate {
+  animation: comeAndGo 12s infinite linear;
+}
