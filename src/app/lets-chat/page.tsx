@@ -32,7 +32,7 @@ const LetsChat = () => {
               <ServiceButtons setSelectedButton={setSelectedButton} />
             )}
           {selectedOption === "Want to buy me a coffee 😎" &&
-            !selectedButton && <h1>COFFEEEEEEEEEEEEE</h1>}
+            !selectedButton && <h1>YOU ARE AWESOME, MAYBE LATER 😁</h1>}
           {selectedButton && !formSubmitted && (
             <ContactForm
               setFormSubmitted={setFormSubmitted}
