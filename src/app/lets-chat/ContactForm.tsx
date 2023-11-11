@@ -39,7 +39,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ formValues, selectedOption, selectedButton }),
+        body: JSON.stringify({ ...formValues, selectedOption, selectedButton }),
       });
 
       if (response.ok) {
