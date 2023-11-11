@@ -85,16 +85,6 @@ body {
   overflow-x: hidden;
 }
 
-/* body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-} */
-
 body {
   overflow: hidden;
   background-color: #00000066;
@@ -144,7 +134,7 @@ main {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 8rem;
+  padding: 5rem;
   min-height: 90vh;
   z-index: 1;
   position: relative;
