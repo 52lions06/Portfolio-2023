@@ -1,0 +1,8 @@
+.hoverEffect {
+  transition: transform 0.3s; /* Smooth transition for the transform property */
+  display: inline-block; /* Allows transform to affect inline elements like span */
+}
+
+.hoverEffect:hover {
+  transform: scale(1.5); /* Enlarge the letter */
+}
