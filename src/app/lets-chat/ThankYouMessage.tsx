@@ -36,7 +36,7 @@ const Bird = () => {
         }}
       ></div>
       <div className={styles.thankyoumessage}>
-        <strong>Thank you for your message, I'll be in touch soon </strong>
+        <strong>Thank you for your message, I&apos;ll be in touch soon </strong>
       </div>
     </>
   );

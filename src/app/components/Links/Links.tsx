@@ -11,10 +11,10 @@ const Links = () => {
         What I Do
       </Link>
       <Link href="/what-im-building" className={styles.links}>
-        What I'm Building
+        What I&apos;m Building
       </Link>
       <Link href="/lets-chat" className={styles.links}>
-        Let's Chat
+        Let&apos;s Chat
       </Link>
     </>
   );

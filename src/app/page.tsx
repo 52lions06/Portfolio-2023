@@ -73,7 +73,7 @@ export default function Home() {
         <section>
           <h1 className={styles.block} ref={blockRef}>
             <span className={styles.title} ref={textRef}>
-              Welcome to Will's World
+              Welcome to Will&apos;s World
             </span>
           </h1>
         </section>

@@ -4,7 +4,7 @@ import styles from "./WhatImBuilding.module.css";
 const WhatImBuilding = () => {
   return (
     <main>
-      <h1 className={styles.title}>What I'm Building</h1>
+      <h1 className={styles.title}>What I&apos;m Building</h1>
       <div className={styles.scene}>
         <iframe
           src="https://giphy.com/embed/iHD88spVFkL7mZakwa"
