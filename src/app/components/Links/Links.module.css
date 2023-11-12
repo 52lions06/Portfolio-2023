@@ -9,3 +9,22 @@
 .links:hover {
   transform: scale(1.2);
 }
+
+/* Tablet and Smaller Desktop */
+/* @media (min-width: 701px) and (max-width: 1120px) {
+  body {
+  }
+} */
+
+/* Tablets and Larger Phones */
+/* @media (min-width: 401px) and (max-width: 700px) {
+  body {
+  }
+} */
+
+/* Most Phones */
+@media (max-width: 401px) {
+  .links {
+    font-size: small;
+  }
+}

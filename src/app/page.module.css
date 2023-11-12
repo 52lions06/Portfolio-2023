@@ -181,3 +181,27 @@ Resources .titleContainer {
     transform: rotate(-360deg); /* Then rotate counterclockwise */
   }
 }
+
+/* Tablet and Smaller Desktop */
+/* @media (min-width: 701px) and (max-width: 1120px) {
+  body {
+  }
+} */
+
+/* Tablets and Larger Phones */
+/* @media (min-width: 401px) and (max-width: 700px) {
+  body {
+  }
+} */
+
+/* Most Phones */
+@media (max-width: 401px) {
+  .block {
+    width: 350px;
+    margin-bottom: 10px;
+  }
+
+  .mainContent {
+    width: 150%;
+  }
+}

@@ -13,12 +13,34 @@ const Footer = () => {
     window.location.href = "/WilliamMcKelvey_Project_Manager.pdf";
   };
 
+  const adjustTextForScreenSize = (typeOfText: string) => {
+    let screenWidth = window.innerWidth;
+    let text;
+
+    if (screenWidth <= 400) {
+      if (typeOfText === "software") {
+        text = "Developer Resume";
+      } else {
+        text = "PM Resume";
+      }
+    } else {
+      if (typeOfText === "software") {
+        text = "Software Engineer Resume";
+      }
+      text = "Project Manager Resume";
+    }
+
+    return text;
+  };
+
+  // Initial check
+
   return (
     <footer className={styles.footer}>
       <ResumeBtn
         onClick={downloadSoftwareResume}
         className={styles.downloadResume}
-        text={"Software Engineer Resume"}
+        text={adjustTextForScreenSize("software")}
       />
 
       <p>
@@ -34,7 +56,7 @@ const Footer = () => {
       <ResumeBtn
         onClick={downloadProjectManagerResume}
         className={styles.downloadResume}
-        text={"Project Manager Resume"}
+        text={adjustTextForScreenSize("project-management")}
       />
     </footer>
   );

@@ -86,3 +86,22 @@ h2.title {
       -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
   }
 }
+
+/* Tablet and Smaller Desktop */
+/* @media (min-width: 701px) and (max-width: 1120px) {
+  body {
+  }
+} */
+
+/* Tablets and Larger Phones */
+/* @media (min-width: 401px) and (max-width: 700px) {
+  body {
+  }
+} */
+
+/* Most Phones */
+@media (max-width: 401px) {
+  .flexContainer {
+    flex-direction: column;
+  }
+}

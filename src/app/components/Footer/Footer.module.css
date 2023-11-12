@@ -45,6 +45,7 @@
   align-items: center;
   font-weight: bold;
   text-shadow: 0 0 2px #000, 0 0 3px #000, 0 0 4px #000, 0 0 5px #000;
+  text-align: center;
 }
 
 .downloadResume {
@@ -88,4 +89,32 @@
   transform: translate(8px, 8px);
   transition: transform 0.2s ease-out;
   z-index: -1;
+}
+
+/* Tablet and Smaller Desktop */
+/* @media (min-width: 701px) and (max-width: 1120px) {
+  body {
+  }
+} */
+
+/* Tablets and Larger Phones */
+/* @media (min-width: 401px) and (max-width: 700px) {
+  body {
+  }
+} */
+
+/* Most Phones */
+@media (max-width: 401px) {
+  .downloadResume {
+    cursor: auto;
+    display: block;
+    font-size: revert;
+    justify-content: none;
+    line-height: normal;
+  }
+
+  .footer p {
+    font-size: small;
+    margin-left: 5px;
+  }
 }

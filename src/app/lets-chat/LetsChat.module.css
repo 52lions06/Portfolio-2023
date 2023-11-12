@@ -10,6 +10,7 @@
   -webkit-background-clip: text, padding-box;
   background-clip: text, padding-box;
   transition: 0.5s;
+  white-space: nowrap;
 }
 
 .title:hover {
@@ -82,7 +83,7 @@
 }
 
 .selectbox::before {
-  content: "\f13a";
+  /* content: "\f13a"; ----- if everything looks fonky then I'll just move below*/
   font-family: FontAwesome;
   position: absolute;
   top: 0;
@@ -104,4 +105,23 @@
 
 .selectbox select option {
   padding: 30px;
+}
+
+/* Tablet and Smaller Desktop */
+/* @media (min-width: 701px) and (max-width: 1120px) {
+  body {
+  }
+} */
+
+/* Tablets and Larger Phones */
+/* @media (min-width: 401px) and (max-width: 700px) {
+  body {
+  }
+} */
+
+/* Most Phones */
+@media (max-width: 401px) {
+  .contact {
+    width: 21rem;
+  }
 }
