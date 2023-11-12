@@ -83,7 +83,6 @@
 }
 
 .selectbox::before {
-  /* content: "\f13a"; ----- if everything looks fonky then I'll just move below*/
   font-family: FontAwesome;
   position: absolute;
   top: 0;
