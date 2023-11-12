@@ -26,8 +26,9 @@ const Footer = () => {
     } else {
       if (typeOfText === "software") {
         text = "Software Engineer Resume";
+      } else {
+        text = "Project Manager Resume";
       }
-      text = "Project Manager Resume";
     }
 
     return text;
