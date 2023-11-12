@@ -13,9 +13,9 @@ const Footer = () => {
     window.location.href = "/WilliamMcKelvey_Project_Manager.pdf";
   };
 
-  const adjustTextForScreenSize = (typeOfText: string) => {
+  const adjustTextForScreenSize = (typeOfText: string): string => {
     let screenWidth;
-    let text;
+    let text: string = "";
 
     if (typeof window !== "undefined") {
       screenWidth = window.innerWidth;
