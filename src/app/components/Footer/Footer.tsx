@@ -14,20 +14,24 @@ const Footer = () => {
   };
 
   const adjustTextForScreenSize = (typeOfText: string) => {
-    let screenWidth = window.innerWidth;
+    let screenWidth;
     let text;
 
-    if (screenWidth <= 400) {
-      if (typeOfText === "software") {
-        text = "Developer Resume";
+    if (typeof window !== "undefined") {
+      screenWidth = window.innerWidth;
+
+      if (screenWidth <= 400) {
+        if (typeOfText === "software") {
+          text = "Developer Resume";
+        } else {
+          text = "PM Resume";
+        }
       } else {
-        text = "PM Resume";
-      }
-    } else {
-      if (typeOfText === "software") {
-        text = "Software Engineer Resume";
-      } else {
-        text = "Project Manager Resume";
+        if (typeOfText === "software") {
+          text = "Software Engineer Resume";
+        } else {
+          text = "Project Manager Resume";
+        }
       }
     }
 
